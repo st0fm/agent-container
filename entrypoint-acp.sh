@@ -1,6 +1,6 @@
 #!/bin/bash
-share="$1"
+cwd="$1"
 shift 1
 export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
-cd "/$share"
-exec "$HOME/.local/bin/claude" "$@"
+cd "$cwd"
+exec claude-agent-acp "$@"
